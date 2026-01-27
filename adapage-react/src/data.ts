@@ -74,7 +74,7 @@ const timeLine = [
 
 ]
 
-const quotes = [
+export const quotes = [
   {
     date: "1999",
     title: "On Loneliness",

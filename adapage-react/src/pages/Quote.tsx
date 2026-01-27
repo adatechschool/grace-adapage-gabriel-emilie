@@ -19,7 +19,7 @@ export default function Quotes() {
 
     <div>
       <h1>Citations</h1>
-      
+
       <main>
 
     <Quotes
@@ -33,3 +33,5 @@ export default function Quotes() {
     </div>
   );
 }
+
+
