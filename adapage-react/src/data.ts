@@ -1,4 +1,5 @@
 export const charac = [{
+    id: 1,
     name: "Sofia Coppola",
     profession: "Film Director",
     age: 55,
@@ -111,41 +112,49 @@ export const timelineData = [
 
 export const quotes = [
   {
+    id: 1,
     date: "1999",
     title: "On Loneliness",
     quote: "I’m interested in the moments where people feel alone, even when they’re surrounded by others."
   },
   {
+    id: 2,
     date: "2003",
     title: "On Lost in Translation",
     quote: "There’s something about loneliness and being lost that I find very cinematic."
   },
   {
+    id: 3,
     date: "2006",
     title: "On Marie Antoinette",
     quote: "I wanted to show her as a real person, not just a historical symbol."
   },
   {
+    id: 4,
     date: "2010",
     title: "On Fame",
     quote: "Celebrity is something I’m fascinated by, but also very wary of."
   },
   {
+    id: 5,
     date: "2013",
     title: "On Storytelling",
     quote: "I like stories that are more about mood and feeling than plot."
   },
   {
+    id: 6,
     date: "2017",
     title: "On Female Perspective",
     quote: "I make films from a female point of view because that’s what I know."
   },
   {
+    id: 7,
     date: "2020",
     title: "On Creativity",
     quote: "I think vulnerability is important in art. That’s where the honesty comes from."
   },
   {
+    id: 8,
     date: "2023",
     title: "On Cinema",
     quote: "Film is a way of capturing a feeling that’s hard to put into words."
