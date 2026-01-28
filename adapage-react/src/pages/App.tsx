@@ -55,7 +55,7 @@ export default function App() {
   {/* Footer */}
 <footer className="bg-[#533532] text-white py-6 mt-16">
     <div className="container mx-auto px-4 text-center">
-      <p className="text-sm">© 2026 - Projet Sofia Coppola</p>
+      <p className="text-sm">© 2026 - Projet Sofia Coppola  - Gabriel Hono & Emilie Gainon</p>
     </div>
 </footer>
     </div>
