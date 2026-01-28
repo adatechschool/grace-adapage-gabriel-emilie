@@ -5,9 +5,7 @@ import { charac } from "../data";
 
 export default function App() {
   return (
-    
-    <>
-  
+  <body>
     <header>
   {/* navigation */}    
   <nav className="bg-[#533532] shadow-md" role="navigation" aria-label="Navigation principale">
@@ -40,12 +38,21 @@ export default function App() {
   </div>
 </nav>
 </header>
- <body>    
+
+ <main>    
   {/* contenu */}
   <div>
   {charac.map((elem) => (
   <div key={elem.id}>
-  <h1 className="font-monsieur text-5xl">{elem.name} ({elem.age})</h1>  <img src={elem.img} alt="Portrait of Sofia Coppola"/>
+  <div className="flex flex-wrap">
+  <h1 className="font-monsieur text-10xl text-[#533532] mb-4">
+        {elem.name}
+      </h1>
+      <p className="font-young-serif text-4xl text-[#825C56] mb-8">
+        ({elem.age})
+      </p> 
+    </div>
+  <img src={elem.img} alt="Portrait of Sofia Coppola"/>
   <p>{elem.country}</p>
   <p>{elem.AstroSign}</p>
   <p>{elem.profession}</p>
@@ -54,7 +61,7 @@ export default function App() {
   ) )}
 </div>
 
-</body> 
+</main> 
 
   {/* Footer */}
 <footer className="bg-[#533532] text-white py-6 mt-16">
@@ -62,7 +69,7 @@ export default function App() {
       <p className="text-sm">© 2026 - Projet Sofia Coppola  - Gabriel Hono & Emilie Gainon</p>
     </div>
 </footer>
-  </>
+  </body>
   );
 }
 

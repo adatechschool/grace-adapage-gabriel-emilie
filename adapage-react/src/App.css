@@ -1,4 +1,10 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Young+Serif&display=swap');
+
+@theme {
+  --font-monsieur: "Monsieur La Doulaise", cursive;
+  --font-young-serif: "Young Serif", serif; 
+}
 
 :root {
   --color-primary: #EDD8D4;
