@@ -5,13 +5,9 @@ export const charac = [{
     age: 55,
     country: "US",
     AstroSign: "Taurus",
-    description: `Sofia Coppola was born on May 14, 1971, in New York City, United States. She is an American film director, screenwriter, producer, and actress, widely recognized for her distinctive cinematic voice and intimate storytelling style. The daughter of renowned filmmaker Francis Ford Coppola, she grew up surrounded by cinema, art, and music, which strongly influenced her creative path from an early age.
-                  
-    Coppola made her feature film directorial debut with The Virgin Suicides (1999), a critically acclaimed adaptation that established her reputation for exploring themes of adolescence, isolation, femininity, and emotional interiority. She gained international recognition with Lost in Translation (2003), a film that earned her the Academy Award for Best Original Screenplay and solidified her place as a major contemporary filmmaker. Her work often focuses on mood, atmosphere, and subtle emotional states rather than conventional narrative structures.
-    
-    Throughout her career, she has continued to explore similar themes in films such as Marie Antoinette (2006), Somewhere (2010), The Bling Ring (2013), The Beguiled (2017), and Priscilla (2023). Her films are known for their strong visual identity, careful use of sound and music, and a contemplative approach to character development.
-    
-    Beyond cinema, Sofia Coppola has also worked extensively in fashion, advertising, and music videos, collaborating with major brands and artists while maintaining a coherent artistic vision. She has been married to musician Thomas Mars, lead singer of the band Phoenix, since August 27, 2011, and they have two daughters, Romy and Cosima. Coppola continues to be an influential figure in contemporary cinema, particularly for her portrayal of female subjectivity and modern alienation.`,
+    description: `Sofia Coppola was born on May 14, 1971, in New York City, United States. She is an American film director, screenwriter, and producer, known for her intimate and atmospheric approach to cinema. Raised in a creative environment as the daughter of filmmaker Francis Ford Coppola, she developed a strong visual sensibility from an early age.
+
+She made her directorial debut with The Virgin Suicides (1999) and gained international recognition with Lost in Translation (2003), which earned her the Academy Award for Best Original Screenplay. Her films explore themes of loneliness, femininity, and emotional isolation, with a strong focus on mood, image, and sound.`,
     img: "https://m.media-amazon.com/images/M/MV5BMTcxODIwMDMzOF5BMl5BanBnXkFtZTgwMDE5MTU0MDE@._V1_FMjpg_UX1000_.jpg",
     importantWorks: [
         `Somewhere (2010)`,
