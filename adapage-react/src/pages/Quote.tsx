@@ -9,9 +9,12 @@ interface quotes {
     quote: string;
 }
 
+
 export default function Quotes() {
   return (
+    <body>
     <div className="min-h-screen bg-[#EDD8D4]">
+      <header>
       {/* Navigation */}
       <nav className="bg-[#533532] shadow-md" role="navigation" aria-label="Navigation principale">
   <div className="container mx-auto px-4 py-4">
@@ -30,7 +33,7 @@ export default function Quotes() {
           className="bg-[#825C56] text-[#EDD8D4] px-6 py-2 rounded-lg hover:bg-[#966F66] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#533532]"
           aria-current="page"
         >
-          Citations
+          Quotes
         </Link>
         <Link 
           to="/timeline" 
@@ -42,11 +45,12 @@ export default function Quotes() {
     </div>
   </div>
 </nav>
+</header>
 
       {/* Contenu principal */}
       <main className="container mx-auto px-4 py-12">
         <h1 className="text-5xl font-bold text-[#533532] mb-12 text-center">
-          Citations de Sofia Coppola
+          Sofia Coppola's quotes
         </h1>
         
         <div className="max-w-4xl mx-auto space-y-8">
@@ -64,6 +68,7 @@ export default function Quotes() {
                 </time>
                 <h2 className="text-2xl font-bold text-[#533532] mb-4">
                   {q.title}
+                  {q.filmTitle && <em>{q.filmTitle}</em>}
                 </h2>
               </div>
               <blockquote className="text-lg text-[#825C56] italic leading-relaxed">
@@ -82,5 +87,6 @@ export default function Quotes() {
         </div>
       </footer>
     </div>
+    </body>
   );
 }
