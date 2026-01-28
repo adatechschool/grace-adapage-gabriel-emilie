@@ -35,9 +35,8 @@ export default function Timeline() {
   }, [timelineData]);
 
   return (
-    <>
-    <body>
-
+   
+<body>
     <Header/>
 
       <main>
@@ -53,8 +52,7 @@ export default function Timeline() {
       </main>
 
     <Footer/>
-
-    </body>
-    </>
+</body>
+   
   );
 }

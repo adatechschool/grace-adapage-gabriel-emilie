@@ -1,11 +1,8 @@
 import '../App.css'
 import type {TimelineItemType} from '../interfaces';
 
-interface TimelineItemProps {
-    data: TimelineItemType;
-}
 
-export const TimeLineItem = ({ data }: TimelineItemProps) => (
+export const TimeLineItem = ({ data }: { data: TimelineItemData }) =>  (
     <div className="timeline-item">
         <div className="timeline-item-content">
             <div className="timeline-header">

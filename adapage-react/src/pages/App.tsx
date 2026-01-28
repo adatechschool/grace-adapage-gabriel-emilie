@@ -2,6 +2,7 @@ import '../App.css'
 import { charac } from "../data";
 import { Header } from "../components/Header";
 import { Footer } from '../components/footer';
+import type { Character } from '../interfaces';
 
 export default function App() {
   return (
@@ -11,7 +12,7 @@ export default function App() {
 
       <main className="grow">    
         <div className="container mx-auto px-6 py-16">
-          {charac.map((elem) => (
+          {charac.map((elem: Character) => (
             <div key={elem.id} className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 gap-12 items-start">
                 

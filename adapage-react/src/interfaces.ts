@@ -18,7 +18,7 @@ export interface Character {
     importantWorks: string[];
 }
 
-export interface TimelineItemType {
+export interface TimelineItemData {
     year: number;
     description: string;
     img: string;
