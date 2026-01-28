@@ -6,7 +6,8 @@ import { charac } from "../data";
 export default function App() {
   return (
     <>
-    <div>
+  
+    <header>
   {/* navigation */}    
   <nav className="bg-[#533532] shadow-md" role="navigation" aria-label="Navigation principale">
   <div className="container mx-auto px-4 py-4">
@@ -25,7 +26,7 @@ export default function App() {
           className="bg-[#825C56] text-[#EDD8D4] px-6 py-2 rounded-lg hover:bg-[#966F66] transition-colors focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-[#533532]"
           aria-current="page"
         >
-          Citations
+          Quotes
         </Link>
         <Link 
           to="/timeline" 
@@ -37,20 +38,22 @@ export default function App() {
     </div>
   </div>
 </nav>
-
-      
+</header>
+ <body>    
   {/* contenu */}
   <div>
   {charac.map((elem) => (
   <div key={elem.id}>
-  <h1>{elem.name} ({elem.age} years)</h1>
+  <h1>{elem.name} ({elem.age})</h1>
+  <p>{elem.country}</p>
+  <p>{elem.AstroSign}</p>
   <p>{elem.profession}</p>
   <p>{elem.description}</p>
   </div>
   ) )}
 </div>
 
-
+</body> 
 
   {/* Footer */}
 <footer className="bg-[#533532] text-white py-6 mt-16">
@@ -58,7 +61,6 @@ export default function App() {
       <p className="text-sm">© 2026 - Projet Sofia Coppola  - Gabriel Hono & Emilie Gainon</p>
     </div>
 </footer>
-    </div>
   </>
   );
 }

@@ -3,6 +3,8 @@ export const charac = [{
     name: "Sofia Coppola",
     profession: "Film Director",
     age: 55,
+    country: "US",
+    AstroSign: "Taurus",
     description: `Sofia Coppola was born on May 14, 1971 in New York City, New York, USA as Sofia Carmina Coppola. She is a film director, known for Somewhere (2010), Lost in Translation (2003), and Marie Antoinette (2006) She has been married to Thomas Mars since August 27, 2011. They have two daughters, Romy and Cosima.`,
     img: "",
     importantWorks: [
