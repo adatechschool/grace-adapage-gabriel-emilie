@@ -1,18 +1,13 @@
 import { Link } from "react-router";
 import { quotes } from "../data";
 import logoSofia from '../images/Logo-Sofia.png';
-
-interface quotes {
-    id: number,
-    date: string;
-    title: string;
-    quote: string;
-}
+import Footer from '../components/footer';
+import { Quote } from '../interfaces';
 
 
 export default function Quotes() {
   return (
-    <body>
+    <>
     <div className="min-h-screen bg-[#EDD8D4]">
       <header>
       {/* Navigation */}
@@ -54,7 +49,7 @@ export default function Quotes() {
         </h1>
         
         <div className="max-w-4xl mx-auto space-y-8">
-          {quotes.map((q) => (
+          {quotes.map((q: Quote) => (
             <article 
               key={q.id}
               className="bg-white rounded-xl shadow-lg p-8 border-l-4 border-[#966F66] hover:shadow-xl transition-shadow"
@@ -79,14 +74,8 @@ export default function Quotes() {
         </div>
       </main>
 
-      {/* Footer */}
-      <footer className="bg-[#533532] text-white py-6 mt-16">
-        <div className="container mx-auto px-4 text-center">
-          <p className="text-sm">© 2026 - Projet Sofia Coppola - Gabriel Hono & Emilie Gainon
-          </p>
-        </div>
-      </footer>
+ <Footer />
     </div>
-    </body>
+    </>
   );
 }
