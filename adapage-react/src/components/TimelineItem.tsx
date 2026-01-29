@@ -3,6 +3,7 @@ import type {TimelineItemData} from '../interfaces';
 
 
 export const TimeLineItem = ({ data }: { data: TimelineItemData }) =>  (
+    
     <div className="timeline-item">
         <div className="timeline-item-content">
             <div className="timeline-header">

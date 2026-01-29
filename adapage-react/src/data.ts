@@ -49,7 +49,7 @@ export const timelineData = [
     },
 
     {year: 2006,
-    description: "'Marie-Antoinette'",
+    description: "'Marie Antoinette'",
     img: "https://m.media-amazon.com/images/M/MV5BMmE4NzQzNGItNTY4My00ZTBhLTk2ZjItZDJkMjRlYTE2MGRiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
     category: {
       type : "Film",
@@ -57,7 +57,7 @@ export const timelineData = [
     },
 
     {year: 2005,
-    description: `'César du meilleur film étranger' for 'Lost in translation'`,
+    description: `'César du meilleur film étranger' for Lost in translation`,
     img: "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/35/15/97/18365406.jpg",
     category: {
       type : "Prize",
@@ -66,7 +66,7 @@ export const timelineData = [
 
     {year: 2006,
     description: `'Festival de Cannes : Prix de l’Éducation Nationale du meilleur film'
-    for 'Marie Antoinette'`,
+    for Marie Antoinette`,
     img: "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/36/20/98/18612764.jpg",
     category: {
       type : "Prize",
@@ -82,7 +82,7 @@ export const timelineData = [
     },
 
     {year: 2010,
-    description: `'Venice film festival : Golden Lion' for 'Somewhere' `,
+    description: `'Venice film festival : Golden Lion' for Somewhere `,
     img: "https://fr.web.img6.acsta.net/c_310_420/medias/nmedia/18/79/57/28/19584769.jpg",
     category: {
       type : "Prize",
@@ -106,7 +106,7 @@ export const timelineData = [
     },
 
     {year: 2017,
-    description: `'Festival de Cannes : Prix de la mise en scène" for 'The Beguiled`,
+    description: `'Festival de Cannes : Prix de la mise en scène' for The Beguiled`,
     img: "https://fr.web.img5.acsta.net/c_310_420/pictures/17/05/16/14/57/074483.jpg",
     category: {
       type : "Prize",
