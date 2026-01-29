@@ -1,382 +1,56 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&family=Young+Serif&display=swap');
-
-@theme {
-  --font-monsieur: "Monsieur La Doulaise", cursive;
-  --font-young-serif: "Young Serif", serif; 
-}
-
 :root {
-  --color-primary: #EDD8D4;
-  --color-secondary: #966F66;
-  --color-tertiary: #825C56;
-  --color-dark: #533532;
-  --color-accent: #6B606D;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif, "Young Serif";
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* MODIFICATION IMPORTANTE: Retirer les contraintes de largeur */
-#root {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  text-align: center;
-}
-
-/* ========================================
-   TIMELINE CONTAINER - VERSION DESKTOP
-   ======================================== */
-.timeline-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin: 40px auto;
-  max-width: 1200px; /* Centrer le contenu de la timeline */
-  padding: 0 20px;
-}
-
-/* Ligne centrale */
-.timeline-container::after {
-  background-color: var(--color-dark);
-  content: "";
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  z-index: 1;
-}
-
-/* ========================================
-   ANIMATIONS
-   ======================================== */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ========================================
-   TIMELINE ITEMS - VERSION DESKTOP
-   ======================================== */
-.timeline-item {
-  display: flex;
-  justify-content: flex-end;
-  padding-right: 30px;
-  position: relative;
-  margin: 25px 0;
-  width: 50%;
-  opacity: 0;
-  transform: translateY(30px);
-}
-
-.timeline-item.visible {
-  animation: fadeInUp 0.6s ease-out forwards;
-}
-
-/* Items impairs - côté gauche */
-.timeline-item:nth-child(odd) {
-  align-self: flex-end;
-  justify-content: flex-start;
-  padding-left: 30px;
-  padding-right: 0;
-}
-
-/* ========================================
-   TIMELINE ITEM CONTENT
-   ======================================== */
-.timeline-item-content {
-  box-shadow: 0 4px 12px rgba(83, 53, 50, 0.15);
-  border-radius: 12px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  padding: 18px 20px;
-  position: relative;
-  width: 100%;
-  max-width: 400px;
-  border: 2px solid var(--color-primary);
-  gap: 14px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-item-content:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 8px 20px rgba(83, 53, 50, 0.25);
-}
-
-/* ========================================
-   HEADER: Tag et Année
-   ======================================== */
-.timeline-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  flex-shrink: 0;
-}
-
-.timeline-item-content .type {
-  color: #fff;
-  font-size: 10px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
-  padding: 6px 12px;
-  text-transform: uppercase;
-  border-radius: 5px;
-  background-color: var(--color-secondary);
-  white-space: nowrap;
-  flex-shrink: 0;
-  transition: transform 0.2s ease;
-}
-
-.timeline-item-content:hover .type {
-  transform: scale(1.05);
-}
-
-.timeline-item-content time {
-  color: var(--color-accent);
-  font-size: 14px;
+a {
   font-weight: 700;
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: #EDD8D4;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #533532;
 }
 
-/* ========================================
-   BODY: Image et Description
-   ======================================== */
-.timeline-body {
+body {
+  margin: 0;
   display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  min-height: 100px;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
 }
 
-.timeline-body img {
-  width: 100px;
-  min-width: 100px;
-  height: 100px;
-  object-fit: cover;
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
   border-radius: 8px;
-  background-color: var(--color-primary);
-  border: 2px solid var(--color-primary);
-  flex-shrink: 0;
-  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  transition: border-color 0.25s;
 }
-
-.timeline-item-content:hover .timeline-body img {
-  transform: scale(1.05);
+button:hover {
+  border-color: #646cff;
 }
-
-.timeline-body h2 {
-  font-size: 14px;
-  line-height: 1.45;
-  margin: 0;
-  color: var(--color-dark);
-  font-weight: 700;
-  text-align: left;
-  flex: 1;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-
-/* ========================================
-   FLÈCHE DU CUADRO
-   ======================================== */
-.timeline-item-content::after {
-  content: ' ';
-  background-color: #fff;
-  box-shadow: 2px -2px 3px rgba(83, 53, 50, 0.1);
-  position: absolute;
-  right: -10px;
-  top: calc(50% - 10px);
-  transform: rotate(45deg);
-  width: 20px;
-  height: 20px;
-  border-right: 2px solid var(--color-primary);
-  border-top: 2px solid var(--color-primary);
-  transition: box-shadow 0.3s ease;
-  z-index: 2;
-}
-
-/* Items impairs - flèche à gauche */
-.timeline-item:nth-child(odd) .timeline-body {
-  flex-direction: row-reverse;
-}
-
-.timeline-item:nth-child(odd) .timeline-body h2 {
-  text-align: right;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content::after {
-  right: auto;
-  left: -10px;
-  box-shadow: -2px 2px 3px rgba(83, 53, 50, 0.1);
-  border-right: none;
-  border-top: none;
-  border-left: 2px solid var(--color-primary);
-  border-bottom: 2px solid var(--color-primary);
-}
-
-/* ========================================
-   CERCLE SUR LA LIGNE
-   ======================================== */
-.timeline-item-content .circle {
-  background-color: var(--color-tertiary);
-  border: 4px solid #fff;
-  box-shadow: 0 0 0 2px var(--color-secondary);
-  border-radius: 50%;
-  position: absolute;
-  top: calc(50% - 12px);
-  right: -42px;
-  width: 24px;
-  height: 24px;
-  z-index: 10;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.timeline-item-content:hover .circle {
-  transform: scale(1.2);
-  box-shadow: 0 0 0 3px var(--color-secondary), 0 0 10px rgba(150, 111, 102, 0.4);
-  z-index: 11;
-}
-
-.timeline-item:nth-child(odd) .timeline-item-content .circle {
-  right: auto;
-  left: -42px;
-}
-
-/* ========================================
-   ANIMATION DELAYS
-   ======================================== */
-.timeline-item:nth-child(1).visible { animation-delay: 0.1s; }
-.timeline-item:nth-child(2).visible { animation-delay: 0.2s; }
-.timeline-item:nth-child(3).visible { animation-delay: 0.3s; }
-.timeline-item:nth-child(4).visible { animation-delay: 0.4s; }
-.timeline-item:nth-child(5).visible { animation-delay: 0.5s; }
-.timeline-item:nth-child(n+6).visible { animation-delay: 0s; }
-
-/* ========================================
-   RESPONSIVE - TABLETTE
-   ======================================== */
-@media (max-width: 1024px) {
-  .timeline-item-content {
-    max-width: 350px;
-  }
-}
-
-/* ========================================
-   RESPONSIVE - MOBILE
-   ======================================== */
-@media (max-width: 768px) {
-  .timeline-container {
-    padding: 0 10px;
-  }
-
-  /* Ligne centrale pour mobile */
-  .timeline-container::after {
-    left: 30px;
-    transform: none;
-  }
-
-  /* Tous les items alignés à gauche */
-  .timeline-item,
-  .timeline-item:nth-child(odd) {
-    width: 100%;
-    align-self: flex-start;
-    justify-content: flex-start;
-    padding-left: 60px;
-    padding-right: 0;
-    margin: 20px 0;
-  }
-
-  /* Contenu des items */
-  .timeline-item-content {
-    width: 100%;
-    max-width: 100%;
-    min-width: auto;
-  }
-
-  /* Body en colonne pour mobile */
-  .timeline-body {
-    flex-direction: column !important;
-    align-items: stretch;
-  }
-
-  .timeline-body img {
-    width: 100%;
-    max-width: 100%;
-    min-width: auto;
-    height: 200px;
-  }
-
-  /* Texte aligné à gauche pour tous */
-  .timeline-body h2,
-  .timeline-item:nth-child(odd) .timeline-body h2 {
-    text-align: left;
-  }
-
-  /* Flèche toujours à gauche en mobile */
-  .timeline-item-content::after,
-  .timeline-item:nth-child(odd) .timeline-item-content::after {
-    right: auto;
-    left: -10px;
-    box-shadow: -2px 2px 3px rgba(83, 53, 50, 0.1);
-    border-right: none;
-    border-top: none;
-    border-left: 2px solid var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-  }
-
-  /* Cercle toujours à gauche en mobile */
-  .timeline-item-content .circle,
-  .timeline-item:nth-child(odd) .timeline-item-content .circle {
-    right: auto;
-    left: -42px;
-  }
-}
-
-/* ========================================
-   RESPONSIVE - TRÈS PETIT MOBILE
-   ======================================== */
-@media (max-width: 480px) {
-  .timeline-container {
-    padding: 0 5px;
-  }
-
-  .timeline-item,
-  .timeline-item:nth-child(odd) {
-    padding-left: 50px;
-  }
-
-  .timeline-item-content {
-    padding: 14px 16px;
-    gap: 12px;
-  }
-
-  .timeline-body img {
-    height: 150px;
-  }
-
-  .timeline-body h2 {
-    font-size: 13px;
-  }
-
-  .timeline-item-content .type {
-    font-size: 9px;
-    padding: 5px 10px;
-  }
-
-  .timeline-item-content time {
-    font-size: 12px;
-  }
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }

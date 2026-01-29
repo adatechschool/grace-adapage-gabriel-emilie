@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import '../App.css'
 import logoSofia from '../images/Logo-Sofia.png';
+import { ThemeToggle } from "./ThemeToggle";
 
 export const Header = () => (
 <header>
@@ -14,6 +15,8 @@ export const Header = () => (
                   className="h-14 w-auto"
                 />
             </Link>
+
+            <ThemeToggle/>
              
             <div className="flex gap-4">
                 <Link to="/quotes" 
