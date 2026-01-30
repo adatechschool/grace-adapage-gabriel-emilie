@@ -4,6 +4,7 @@ import { Header } from "../components/Header";
 import type { Character } from '../interfaces';
 import { Footer } from '../components/footer';
 import { ThemeToggle } from '../components/ThemeToggle';
+import { formatTitle } from '../components/FormatTitleFilm';
 
 export default function App() {
   return (
@@ -60,9 +61,11 @@ export default function App() {
                       <h2 className="text-[#533532] dark:text-[#EDD8D4] font-young-serif font-bold text-lg md:text-xl uppercase tracking-wide mb-3">
                         About {elem.name}
                       </h2>
-                      <p className="text-[#533532] dark:text-[#EDD8D4] leading-relaxed text-sm md:text-base">
-                        {elem.description}
-                      </p>
+                    <p 
+                  className="text-[#533532] dark:text-[#EDD8D4] leading-relaxed text-sm md:text-base"
+                  dangerouslySetInnerHTML={{ __html: formatTitle(elem.description) }}
+                />
+          
                     </div>
                   </div>
                 </div>

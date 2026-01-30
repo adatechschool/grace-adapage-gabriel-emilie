@@ -1,6 +1,6 @@
 import '../App.css'
 import type {TimelineItemData} from '../interfaces';
-
+import { formatTitle } from '../components/FormatTitleFilm';
 
 export const TimeLineItem = ({ data }: { data: TimelineItemData }) =>  (
     
@@ -14,7 +14,7 @@ export const TimeLineItem = ({ data }: { data: TimelineItemData }) =>  (
             </div>
             <div className="timeline-body">
                 {data.img && <img src={data.img} alt={data.description} />}
-                <h2>{data.description}</h2>
+                <h2 dangerouslySetInnerHTML={{ __html: formatTitle(data.description) }} /> 
             </div>
             <span className="circle" />
         </div>

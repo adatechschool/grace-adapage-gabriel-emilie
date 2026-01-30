@@ -3,7 +3,6 @@ import type { Quote } from '../interfaces';
 import { Header } from "../components/Header";
 import { Footer } from "../components/footer";
 
-
 export default function Quotes() {
   return (
     <>
